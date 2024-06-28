@@ -1,0 +1,2 @@
+include timm_ctranspath/models/pruned/*.txt
+
