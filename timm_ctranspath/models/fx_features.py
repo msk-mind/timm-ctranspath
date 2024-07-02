@@ -17,8 +17,8 @@ from .layers import Conv2dSame, ScaledStdConv2dSame, BatchNormAct2d, BlurPool2d,
 from .layers.non_local_attn import BilinearAttnTransform
 from .layers.pool2d_same import MaxPool2dSame, AvgPool2dSame
 
-# NOTE: By default, any modules from timm.models.layers that we want to treat as leaf modules go here
-# BUT modules from timm.models should use the registration mechanism below
+# NOTE: By default, any modules from timm_ctranspath.models.layers that we want to treat as leaf modules go here
+# BUT modules from timm_ctranspath.models should use the registration mechanism below
 _leaf_modules = {
     BatchNormAct2d,  # reason: flow control for jit scripting
     BilinearAttnTransform,  # reason: flow control t <= 1
@@ -38,7 +38,7 @@ except ImportError:
 
 def register_notrace_module(module: nn.Module):
     """
-    Any module not under timm.models.layers should get this decorator if we don't want to trace through it.
+    Any module not under timm_ctranspath.models.layers should get this decorator if we don't want to trace through it.
     """
     _leaf_modules.add(module)
     return module

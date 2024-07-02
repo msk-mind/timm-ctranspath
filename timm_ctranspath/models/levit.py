@@ -31,7 +31,7 @@ from typing import Dict
 import torch
 import torch.nn as nn
 
-from timm.data import IMAGENET_DEFAULT_STD, IMAGENET_DEFAULT_MEAN
+from timm_ctranspath.data import IMAGENET_DEFAULT_STD, IMAGENET_DEFAULT_MEAN
 from .helpers import build_model_with_cfg, overlay_external_default_cfg
 from .layers import to_ntuple, get_act_layer
 from .vision_transformer import trunc_normal_

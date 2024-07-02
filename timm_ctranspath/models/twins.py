@@ -20,7 +20,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from functools import partial
 
-from timm.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
+from timm_ctranspath.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
 from .layers import Mlp, DropPath, to_2tuple, trunc_normal_
 from .fx_features import register_notrace_module
 from .registry import register_model

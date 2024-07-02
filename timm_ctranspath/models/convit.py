@@ -27,7 +27,7 @@ import torch.nn as nn
 from functools import partial
 import torch.nn.functional as F
 
-from timm.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
+from timm_ctranspath.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
 from .helpers import build_model_with_cfg
 from .layers import DropPath, to_2tuple, trunc_normal_, PatchEmbed, Mlp
 from .registry import register_model

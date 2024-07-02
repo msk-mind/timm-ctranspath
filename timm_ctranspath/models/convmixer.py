@@ -1,6 +1,6 @@
 import torch.nn as nn
-from timm.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
-from timm.models.registry import register_model
+from timm_ctranspath.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
+from timm_ctranspath.models.registry import register_model
 from .helpers import build_model_with_cfg
 
 

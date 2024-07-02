@@ -33,7 +33,7 @@ import torch.hub
 from functools import partial
 from typing import List
 
-from timm.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
+from timm_ctranspath.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
 from .fx_features import register_notrace_function
 from .helpers import build_model_with_cfg
 from .layers import DropPath, to_2tuple, trunc_normal_, _assert

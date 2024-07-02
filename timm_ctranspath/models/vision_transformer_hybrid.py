@@ -19,12 +19,12 @@ from functools import partial
 import torch
 import torch.nn as nn
 
-from timm.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
+from timm_ctranspath.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
 from .layers import StdConv2dSame, StdConv2d, to_2tuple
 from .resnet import resnet26d, resnet50d
 from .resnetv2 import ResNetV2, create_resnetv2_stem
 from .registry import register_model
-from timm.models.vision_transformer import _create_vision_transformer
+from timm_ctranspath.models.vision_transformer import _create_vision_transformer
 
 
 def _cfg(url='', **kwargs):

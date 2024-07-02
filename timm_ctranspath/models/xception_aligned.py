@@ -10,7 +10,7 @@ from functools import partial
 import torch.nn as nn
 import torch.nn.functional as F
 
-from timm.data import IMAGENET_INCEPTION_MEAN, IMAGENET_INCEPTION_STD
+from timm_ctranspath.data import IMAGENET_INCEPTION_MEAN, IMAGENET_INCEPTION_STD
 from .helpers import build_model_with_cfg
 from .layers import ClassifierHead, ConvBnAct, create_conv2d
 from .layers.helpers import to_3tuple

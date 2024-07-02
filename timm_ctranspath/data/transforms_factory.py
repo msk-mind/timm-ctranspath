@@ -8,10 +8,10 @@ import math
 import torch
 from torchvision import transforms
 
-from timm.data.constants import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD, DEFAULT_CROP_PCT
-from timm.data.auto_augment import rand_augment_transform, augment_and_mix_transform, auto_augment_transform
-from timm.data.transforms import str_to_interp_mode, str_to_pil_interp, RandomResizedCropAndInterpolation, ToNumpy
-from timm.data.random_erasing import RandomErasing
+from timm_ctranspath.data.constants import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD, DEFAULT_CROP_PCT
+from timm_ctranspath.data.auto_augment import rand_augment_transform, augment_and_mix_transform, auto_augment_transform
+from timm_ctranspath.data.transforms import str_to_interp_mode, str_to_pil_interp, RandomResizedCropAndInterpolation, ToNumpy
+from timm_ctranspath.data.random_erasing import RandomErasing
 
 
 def transforms_noaug_train(
@@ -193,7 +193,7 @@ def create_transform(
 
     if tf_preprocessing and use_prefetcher:
         assert not separate, "Separate transforms not supported for TF preprocessing"
-        from timm.data.tf_preprocessing import TfPreprocessTransform
+        from timm_ctranspath.data.tf_preprocessing import TfPreprocessTransform
         transform = TfPreprocessTransform(
             is_training=is_training, size=img_size, interpolation=interpolation)
     else:

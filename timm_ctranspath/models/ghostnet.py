@@ -12,7 +12,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
-from timm.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
+from timm_ctranspath.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
 from .layers import SelectAdaptivePool2d, Linear, make_divisible
 from .efficientnet_blocks import SqueezeExcite, ConvBnAct
 from .helpers import build_model_with_cfg

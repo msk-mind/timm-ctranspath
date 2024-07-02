@@ -183,7 +183,7 @@ def _freeze_unfreeze(root_module, submodules=[], include_bn_running_stats=True, 
         # Raise assertion here because we can't convert it in place
         raise AssertionError(
             "You have provided a batch norm layer as the `root module`. Please use "
-            "`timm.utils.model.freeze_batch_norm_2d` or `timm.utils.model.unfreeze_batch_norm_2d` instead.")
+            "`timm_ctranspath.utils.model.freeze_batch_norm_2d` or `timm.utils.model.unfreeze_batch_norm_2d` instead.")
 
     if isinstance(submodules, str):
         submodules = [submodules]
@@ -236,11 +236,11 @@ def freeze(root_module, submodules=[], include_bn_running_stats=True):
             it's good practice to freeze batch norm stats. And note that these are different to the affine parameters
             which are just normal PyTorch parameters. Defaults to `True`.
 
-    Hint: If you want to freeze batch norm ONLY, use `timm.utils.model.freeze_batch_norm_2d`.
+    Hint: If you want to freeze batch norm ONLY, use `timm_ctranspath.utils.model.freeze_batch_norm_2d`.
 
     Examples::
 
-        >>> model = timm.create_model('resnet18')
+        >>> model = timm_ctranspath.create_model('resnet18')
         >>> # Freeze up to and including layer2
         >>> submodules = [n for n, _ in model.named_children()]
         >>> print(submodules)

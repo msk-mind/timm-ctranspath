@@ -9,7 +9,7 @@ Modified for torchscript compat, and consistency with timm by Ross Wightman
 import torch
 from torch import nn
 
-from timm.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
+from timm_ctranspath.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
 from .helpers import build_model_with_cfg
 from .layers import SplitAttn
 from .registry import register_model
